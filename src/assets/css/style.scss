@@ -27,7 +27,7 @@ footer {
   position: absolute;
   z-index: 999;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   text-align: right;
   text-transform: uppercase;
   font-size: 0.6em;
@@ -42,10 +42,16 @@ a {
     cursor: pointer;
   }
 }
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.videoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  video {
+    max-width: 200%;
+    display: block;
+    object-fit: contain;
+  }
 }
 iframe{ 
   position: absolute; 
@@ -62,6 +68,11 @@ iframe{
   }
   footer {
     bottom: 50px;
-    right: 50px;
+    left: 50px;
+  }
+  .videoWrap {
+    video {
+      max-width: 100%;
+    }
   }
 }
