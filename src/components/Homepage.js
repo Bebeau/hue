@@ -37,14 +37,14 @@ const Homepage = () => {
         }, 0);
 
       }
-      
+
     }
   }, []);
 
   return (
     <>
       <header>
-        <a href="/community" target="_BLANK">Join Community</a>
+        <a href="/join" target="_BLANK">Join Community</a>
       </header>
       {shouldUseImage ? (
         <img src={hueMp4} alt="Muted Video" />

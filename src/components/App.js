@@ -14,7 +14,7 @@ const App = () => {
             element={<Homepage />} 
           />
           <Route
-            path="/community"
+            path="/join"
             element={<Community />}
           />
         </Routes>
