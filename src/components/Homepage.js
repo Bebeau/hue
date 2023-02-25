@@ -44,7 +44,7 @@ const Homepage = () => {
   return (
     <>
       <header>
-        <a href="/join" target="_BLANK">Join Community</a>
+        <a href="/join">Join Community</a>
       </header>
       {shouldUseImage ? (
         <img src={hueMp4} alt="Muted Video" />
