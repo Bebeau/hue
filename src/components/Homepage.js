@@ -10,7 +10,7 @@ const isSafari = () => {
 
 const Homepage = () => {
   const videoParentRef = useRef();
-  const [shouldUseImage, setShouldUseImage] = useState(true);
+  const [shouldUseImage, setShouldUseImage] = useState(false);
   const [year] = useState((new Date().getFullYear()));
 
   useEffect(() => {
