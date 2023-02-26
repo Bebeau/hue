@@ -61,10 +61,11 @@ a:hover {
 }
 .videoWrap .video,
 .videoWrap video {
-  max-width: 200%;
+  max-width: 100%;
   display: block;
   object-fit: contain;
   transition: all 0.5s ease-in-out;
+  transform: scale(2);
 }
 
 iframe {
@@ -88,6 +89,7 @@ iframe {
   .videoWrap .video,
   .videoWrap video {
     max-width: 100%;
+    transform: scale(1);
     transition: all 0.5s ease-in-out;
   }
 }
