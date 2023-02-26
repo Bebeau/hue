@@ -9,7 +9,7 @@ const isSafari = () => {
 
 const Homepage = () => {
   const videoParentRef = useRef();
-  const [shouldUseImage, setShouldUseImage] = useState(false);
+  const [shouldUseImage, setShouldUseImage] = useState(true);
   const [year] = useState((new Date().getFullYear()));
 
   useEffect(() => {
@@ -46,25 +46,26 @@ const Homepage = () => {
       <header>
         <a href="/join">Join Community</a>
       </header>
-      {shouldUseImage ? (
-        <img className="videoImage" src={hueMp4} alt="Muted Video" />
-      ) : (
-        <div 
-          ref={videoParentRef}
-          className="videoWrap" 
-          dangerouslySetInnerHTML={{ __html: `
-            <video 
-              loop 
-              muted 
-              autoplay 
-              playsinline
-              preload="metadata"
-            >
-              <source src=${hueMp4} type="video/mp4" />
-            </video>`
-          }}
-        />
-      )}
+      <div className="videoWrap">
+        {shouldUseImage ? (
+          <img className="video" src={hueMp4} alt="Muted Video" />
+        ) : (
+          <div 
+            ref={videoParentRef}
+            dangerouslySetInnerHTML={{ __html: `
+              <video 
+                loop 
+                muted 
+                autoplay 
+                playsinline
+                preload="metadata"
+              >
+                <source src=${hueMp4} type="video/mp4" />
+              </video>`
+            }}
+          />
+        )}
+      </div>
       <footer>
         <div>©</div>
         <div><span>{year}</span> HUE UNLIMITED</div>

@@ -48,10 +48,6 @@ a:hover {
   cursor: pointer;
 }
 
-.videoImage {
-  max-width: 100%;
-}
-
 .videoWrap {
   display: flex;
   align-items: center;
@@ -63,6 +59,7 @@ a:hover {
   left: 0;
   right: 0;
 }
+.videoWrap .video,
 .videoWrap video {
   max-width: 200%;
   display: block;
@@ -88,6 +85,7 @@ iframe {
     bottom: 50px;
     left: 50px;
   }
+  .videoWrap .video,
   .videoWrap video {
     max-width: 100%;
     transition: all 0.5s ease-in-out;
