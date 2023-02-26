@@ -9,7 +9,7 @@ const isSafari = () => {
 
 const Homepage = () => {
   const videoParentRef = useRef();
-  const [shouldUseImage, setShouldUseImage] = useState(false);
+  const [shouldUseImage, setShouldUseImage] = useState(true);
   const [year] = useState((new Date().getFullYear()));
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Homepage = () => {
         <a href="/join">Join Community</a>
       </header>
       {shouldUseImage ? (
-        <img src={hueMp4} alt="Muted Video" />
+        <img className="videoImage" src={hueMp4} alt="Muted Video" />
       ) : (
         <div 
           ref={videoParentRef}

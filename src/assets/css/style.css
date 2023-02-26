@@ -48,6 +48,10 @@ a:hover {
   cursor: pointer;
 }
 
+.videoImage {
+  max-width: 100%;
+}
+
 .videoWrap {
   display: flex;
   align-items: center;
