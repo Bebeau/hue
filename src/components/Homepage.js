@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 
 import hueMp4 from '../assets/videos/hue.mp4';
+import still from '../assets/videos/still.jpg';
 
 const isSafari = () => {
   const ua = navigator.userAgent.toLowerCase();
@@ -9,7 +10,7 @@ const isSafari = () => {
 
 const Homepage = () => {
   const videoParentRef = useRef();
-  const [shouldUseImage, setShouldUseImage] = useState(false);
+  const [shouldUseImage, setShouldUseImage] = useState(true);
   const [year] = useState((new Date().getFullYear()));
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const Homepage = () => {
       </header>
       <div className="videoWrap">
         {shouldUseImage ? (
-          <img className="video" src={hueMp4} alt="Muted Video" />
+          <img className="video" src={still} alt="Muted Video" />
         ) : (
           <div 
             ref={videoParentRef}
