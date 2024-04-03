@@ -12,6 +12,7 @@ const Homepage = () => {
   const videoParentRef = useRef();
   const [shouldUseImage, setShouldUseImage] = useState(false);
   const [year] = useState((new Date().getFullYear()));
+  const [showSignUp, setShowSignUp] = useState(false);
 
   useEffect(() => {
     if (isSafari() && videoParentRef.current) {
@@ -45,9 +46,10 @@ const Homepage = () => {
   return (
     <>
       <header>
-        <a href="/join">Join Community</a>
+        <a href="https://hue.fm" target="_blank" rel="noopener noreferrer">EXPERIENCE<br className="break" />HUE FM</a>
+        <button className="textRight" onClick={() => setShowSignUp(true)}>Join Our<br className="break" />Community</button>
       </header>
-      <div className="videoWrap">
+      <div className={showSignUp ? 'videoWrap show' : 'videoWrap'}>
         {shouldUseImage ? (
           <img className="video" src={still} alt="Muted Video" />
         ) : (
@@ -66,10 +68,20 @@ const Homepage = () => {
             }}
           />
         )}
-      </div>
+        {showSignUp && (
+          <div id="signUp">
+            <iframe src="https://laylo.com/laylo-8bc6b/profile/embed?theme=dark&emailPlusSms=true&" frameborder="0" scrolling="no" allowtransparency="true" width="100%" height="220" title="Laylo Widget" />
+          </div>
+        )}
+        </div>
       <footer>
-        <div>©</div>
-        <div><span>{year}</span> HUE UNLIMITED</div>
+        <a href="https://linktr.ee/huesound" target="_blank" rel="noopener noreferrer">LISTEN TO<br className="break" />HUE SOUND</a>
+        <article className="legal">
+          <section>
+          © <span>{year}</span> HUE UNLIMITED
+          </section>
+        </article>
+        <a href="mailto:info@hueunlimited.com?subject=Hue Website Inquiry" target="_blank" rel="noopener noreferrer" className="textRight">TALK<br className="break" />TO HUE</a>
       </footer>
     </>
   )
