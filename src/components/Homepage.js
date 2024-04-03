@@ -46,8 +46,8 @@ const Homepage = () => {
   return (
     <>
       <header>
-        <a href="https://hue.fm" target="_blank" rel="noopener noreferrer">EXPERIENCE<br className="break" />HUE FM</a>
-        <button className="textRight" onClick={() => setShowSignUp(true)}>Join Our<br className="break" />Community</button>
+        <a href="https://hue.fm" target="_blank" rel="noopener noreferrer" onClick={() => setShowSignUp(false)}>EXPERIENCE<br className="break" />HUE FM</a>
+        <button className="textRight" onClick={() => setShowSignUp(!showSignUp)}>Join Our<br className="break" />Community</button>
       </header>
       <div className={showSignUp ? 'videoWrap show' : 'videoWrap'}>
         {shouldUseImage ? (
@@ -75,13 +75,13 @@ const Homepage = () => {
         )}
         </div>
       <footer>
-        <a href="https://linktr.ee/huesound" target="_blank" rel="noopener noreferrer">LISTEN TO<br className="break" />HUE SOUND</a>
+        <a href="https://linktr.ee/huesound" target="_blank" rel="noopener noreferrer" onClick={() => setShowSignUp(false)}>LISTEN TO<br className="break" />HUE SOUND</a>
         <article className="legal">
           <section>
           © <span>{year}</span> HUE UNLIMITED
           </section>
         </article>
-        <a href="mailto:info@hueunlimited.com?subject=Hue Website Inquiry" target="_blank" rel="noopener noreferrer" className="textRight">TALK<br className="break" />TO HUE</a>
+        <a href="mailto:info@hueunlimited.com?subject=Hue Website Inquiry" className="textRight" onClick={() => setShowSignUp(false)}>TALK<br className="break" />TO HUE</a>
       </footer>
     </>
   )
