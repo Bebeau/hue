@@ -130,5 +130,10 @@ iframe{
       transform: scale(1);
       transition: all 2s ease-in-out;
     }
+    &.show {
+      #signUp {
+        transform: translate(0, 0);
+      }
+    }
   }
 }
