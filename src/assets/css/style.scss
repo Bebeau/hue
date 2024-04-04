@@ -71,26 +71,26 @@ a, button {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   #signUp {
+    opacity: 0;
+    flex: 0 1 0;
     width: 100%;
     position: relative;
     z-index: 999;
     max-width: 400px;
     height: 220px;
     overflow: hidden;
+    transform: translate(0,100%);
+    transition: all 2s ease-in-out;
   }
   .video,
   video {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    flex: 1 1;
     max-width: 100%;
     height: 100dvh;
     margin: 0 auto;
@@ -103,10 +103,14 @@ a, button {
     .video,
     video {
       height: 50dvh;
+      transform: scale(1);
       transition: all 2s ease-in-out;
     }
     #signUp {
-      transform: translate(0,110px);
+      opacity: 1;
+      flex: 1 0 220px;
+      transform: translate(0, 0);
+      transition: all 2s ease-in-out;
     }
   }
 }

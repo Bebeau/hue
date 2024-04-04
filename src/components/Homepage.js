@@ -68,11 +68,9 @@ const Homepage = () => {
             }}
           />
         )}
-        {showSignUp && (
           <div id="signUp">
             <iframe src="https://laylo.com/laylo-8bc6b/profile/embed?theme=dark&emailPlusSms=true&" frameborder="0" scrolling="no" allowtransparency="true" width="100%" height="220" title="Laylo Widget" />
           </div>
-        )}
         </div>
       <footer>
         <a href="https://linktr.ee/huesound" target="_blank" rel="noopener noreferrer" onClick={() => setShowSignUp(false)}>LISTEN TO<br className="break" />HUE SOUND</a>
