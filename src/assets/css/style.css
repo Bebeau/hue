@@ -114,7 +114,7 @@ a:active, a:focus, button:active, button:focus {
 .videoWrap.show #signUp {
   opacity: 1;
   flex: 1 0 220px;
-  transform: translate(0, -50px);
+  transform: translate(0, 0);
   transition: all 2s ease-in-out;
 }
 
