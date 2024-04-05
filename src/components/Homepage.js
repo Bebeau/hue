@@ -1,7 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 
 import hueMp4 from '../assets/videos/hue.mp4';
-import still from '../assets/videos/still.jpg';
+import poster from '../assets/videos/poster.jpg';
+// import still from '../assets/videos/still.jpg';
+import gif from '../assets/videos/hue.gif';
 
 const isSafari = () => {
   const ua = navigator.userAgent.toLowerCase();
@@ -10,7 +12,7 @@ const isSafari = () => {
 
 const Homepage = () => {
   const videoParentRef = useRef();
-  const [shouldUseImage, setShouldUseImage] = useState(false);
+  const [shouldUseImage, setShouldUseImage] = useState(true);
   const [year] = useState((new Date().getFullYear()));
   const [showSignUp, setShowSignUp] = useState(false);
 
@@ -51,7 +53,7 @@ const Homepage = () => {
       </header>
       <div className={showSignUp ? 'videoWrap show' : 'videoWrap'}>
         {shouldUseImage ? (
-          <img className="video" src={still} alt="Muted Video" />
+          <img className="video" src={gif} alt="Muted Video" />
         ) : (
           <div 
             ref={videoParentRef}
@@ -62,6 +64,7 @@ const Homepage = () => {
                 autoplay 
                 playsinline
                 preload="metadata"
+                poster=${poster}
               >
                 <source src=${hueMp4} type="video/mp4" />
               </video>`
